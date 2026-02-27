@@ -69,9 +69,9 @@ header p {
 }
 
 section {
-    max-width:1000px;
-    margin:60px auto;
-    padding:0 20px;
+    padding: 60px 20px;
+    max-width: 100%;
+    width: 100%;
 }
 
 h2 {
@@ -152,7 +152,16 @@ footer {
         <p>Sẵn sàng hợp tác đào tạo, tư vấn part-time và dự án chuyên sâu.</p>
     </div>
 </section>
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    nav ul li {
+        padding: 10px;
+    }
+}
 <footer>
     © 2026 Hồ Đức Hạnh | Oracle & Cybersecurity Consultant
 </footer>
