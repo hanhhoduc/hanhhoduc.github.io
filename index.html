@@ -1,172 +1,384 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hồ Đức Hạnh | Oracle & An ninh mạng</title>
+
+<title>Hồ Đức Hạnh | Oracle • Cybersecurity • IT Consultant</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-body {
-    nav {
-    background:#082f6b;
-    position:fixed;
-    width:100%;
-    top:0;
-    z-index:1000;
+
+/* GLOBAL */
+
+body{
+margin:0;
+font-family:'Segoe UI',Tahoma,sans-serif;
+background:#f4f6f9;
+color:#222;
 }
 
-nav ul {
-    list-style:none;
-    margin:0;
-    padding:0;
-    display:flex;
-    justify-content:center;
+/* MENU */
+
+nav{
+background:#082f6b;
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.15);
 }
 
-nav ul li {
-    padding:15px 25px;
+nav ul{
+list-style:none;
+margin:0;
+padding:0;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
 }
 
-nav ul li a {
-    color:white;
-    text-decoration:none;
-    font-weight:500;
+nav li{
+padding:15px 20px;
 }
 
-nav ul li a:hover {
-    color:#ffd700;
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+font-size:15px;
 }
 
-body {
-    scroll-behavior:smooth;
+nav a:hover{
+color:#ffd700;
 }
 
-header {
-    margin-top:60px;
-}
-    margin:0;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background:#f4f6f9;
-    color:#222;
-    line-height:1.6;
+nav a.active{
+color:#ffd700;
+border-bottom:3px solid #ffd700;
+padding-bottom:5px;
 }
 
-header {
-    background: linear-gradient(135deg,#0b3d91,#1f5fbf);
-    color:white;
-    text-align:center;
-    padding:80px 20px;
+/* HEADER */
+
+header{
+margin-top:60px;
+background:linear-gradient(135deg,#0b3d91,#1f5fbf);
+color:white;
+text-align:center;
+padding:90px 20px;
 }
 
-header h1 {
-    font-size:40px;
-    margin-bottom:10px;
+header h1{
+font-size:42px;
+margin-bottom:10px;
 }
 
-header p {
-    font-size:20px;
-    opacity:0.95;
+header p{
+font-size:20px;
+opacity:0.95;
 }
 
-section {
-    padding: 60px 20px;
-    max-width: 100%;
-    width: 100%;
+/* SECTION */
+
+section{
+padding:70px 20px;
+max-width:1100px;
+margin:auto;
+display:none;
+animation:fade 0.5s;
 }
 
-h2 {
-    color:#0b3d91;
-    border-bottom:3px solid #0b3d91;
-    padding-bottom:10px;
+section.active{
+display:block;
 }
 
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
+@keyframes fade{
+from{opacity:0}
+to{opacity:1}
 }
 
-footer {
-    background:#0b3d91;
-    color:white;
-    text-align:center;
-    padding:30px;
-    margin-top:60px;
+/* TITLE */
+
+h2{
+color:#0b3d91;
+border-bottom:3px solid #0b3d91;
+padding-bottom:10px;
+margin-bottom:30px;
 }
+
+/* CARD */
+
+.card{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+margin-bottom:25px;
+line-height:1.7;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+/* ICON */
+
+.icon{
+font-size:28px;
+color:#0b3d91;
+margin-bottom:10px;
+}
+
+/* FOOTER */
+
+footer{
+background:#0b3d91;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header h1{
+font-size:30px;
+}
+
+header p{
+font-size:16px;
+}
+
+nav ul{
+justify-content:space-around;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
+
 <header>
-    <h1>Hồ Đức Hạnh</h1>
-    <p>Oracle Database 26AI | An ninh mạng | Tư vấn dự án CNTT</p>
-    <p>Chuyên gia CNTT khu vực công với gần 30 năm kinh nghiệm</p>
+
+<h1>Hồ Đức Hạnh</h1>
+
+<p>Oracle Database 26AI | An ninh mạng | Tư vấn dự án CNTT</p>
+
+<p>Chuyên gia CNTT khu vực công với gần 30 năm kinh nghiệm</p>
+
 </header>
-    <nav>
-  <ul>
-    <li><a href="#gioithieu">Giới thiệu</a></li>
-    <li><a href="#oracle">Oracle DBA</a></li>
-    <li><a href="#security">An ninh mạng</a></li>
-    <li><a href="#consulting">Tư vấn CNTT</a></li>
-    <li><a href="#blog">Blog</a></li>
-    <li><a href="#contact">Liên hệ</a></li>
-  </ul>
+
+<nav>
+
+<ul>
+
+<li><a href="#" onclick="showSection('gioithieu',this)" class="active">Giới thiệu</a></li>
+
+<li><a href="#" onclick="showSection('oracle',this)">Oracle DBA</a></li>
+
+<li><a href="#" onclick="showSection('security',this)">An ninh mạng</a></li>
+
+<li><a href="#" onclick="showSection('consulting',this)">Tư vấn CNTT</a></li>
+
+<li><a href="#" onclick="showSection('blog',this)">Blog</a></li>
+
+<li><a href="#" onclick="showSection('contact',this)">Liên hệ</a></li>
+
+</ul>
+
 </nav>
-<section id="gioithieu"> 
+
+<!-- GIỚI THIỆU -->
+
+<section id="gioithieu" class="active">
+
+<h2>Giới thiệu</h2>
+
+<div class="card">
+
+Tôi có gần 30 năm công tác trong lĩnh vực CNTT tại hệ thống Kho bạc Nhà nước.
+
+Chuyên sâu về quản trị Oracle Database, an ninh mạng và tư vấn đầu tư các dự án CNTT.
+
+</div>
+
+</section>
+
+
+<!-- ORACLE -->
+
 <section id="oracle">
+
+<h2>Oracle Database</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon"><i class="fa-solid fa-database"></i></div>
+<h3>Oracle DBA</h3>
+Triển khai, vận hành và tối ưu hệ thống Oracle Database 26AI.
+</div>
+
+<div class="card">
+<div class="icon"><i class="fa-solid fa-server"></i></div>
+<h3>Kiến trúc hệ thống</h3>
+Thiết kế kiến trúc Database cho hệ thống lớn.
+</div>
+
+<div class="card">
+<div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+<h3>Tối ưu hiệu năng</h3>
+Phân tích và tối ưu hiệu năng hệ thống Oracle.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SECURITY -->
+
 <section id="security">
+
+<h2>An ninh mạng</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+<h3>Đánh giá bảo mật</h3>
+Kiểm tra và đánh giá an ninh hệ thống.
+</div>
+
+<div class="card">
+<div class="icon"><i class="fa-solid fa-network-wired"></i></div>
+<h3>Kiến trúc an ninh</h3>
+Thiết kế kiến trúc bảo mật hệ thống.
+</div>
+
+<div class="card">
+<div class="icon"><i class="fa-solid fa-user-lock"></i></div>
+<h3>Chính sách bảo mật</h3>
+Xây dựng chính sách và quy trình an toàn thông tin.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONSULTING -->
+
 <section id="consulting">
+
+<h2>Tư vấn dự án CNTT</h2>
+
+<div class="card">
+
+Tư vấn lập báo cáo nghiên cứu khả thi, báo cáo kinh tế kỹ thuật
+và hỗ trợ đấu thầu các dự án CNTT.
+
+</div>
+
+</section>
+
+
+<!-- BLOG -->
+
 <section id="blog">
+
+<h2>Blog công nghệ</h2>
+
+<div class="card">
+
+- Hành trình từ OCP 9i đến OCP 26AI  
+<br>
+- Kinh nghiệm triển khai Oracle Database  
+<br>
+- Mô hình an ninh mạng doanh nghiệp  
+<br>
+- Tư vấn đầu tư dự án CNTT
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
 <section id="contact">
-<section>
-    <h2>Giới thiệu</h2>
-    <div class="card">
-        <p>
-        Tôi có gần 30 năm công tác trong lĩnh vực CNTT tại hệ thống Kho bạc Nhà nước.
-        Chuyên sâu về quản trị Oracle Database, an ninh mạng và tư vấn đầu tư các dự án CNTT.
-        </p>
-    </div>
+
+<h2>Liên hệ hợp tác</h2>
+
+<div class="card">
+
+<i class="fa-solid fa-envelope"></i>
+Email: **hanhhoduc@gmail.com**
+
+<br><br>
+
+<i class="fa-solid fa-phone"></i>
+Mobile: **0912 388 515**
+
+<br><br>
+
+Sẵn sàng hợp tác tư vấn dự án CNTT,
+đào tạo Oracle Database và an ninh mạng.
+
+</div>
+
 </section>
 
-<section>
-    <h2>Lĩnh vực chuyên môn</h2>
-    <div class="card">
-        <h3>Oracle DBA (26AI)</h3>
-        <p>Nghiên cứu, triển khai và tối ưu Oracle Database 26AI.
-        Định hướng giảng dạy và tư vấn chuyên sâu Oracle Database.</p>
-    </div>
 
-    <div class="card">
-        <h3>An ninh mạng</h3>
-        <p>Tư vấn, đánh giá an ninh hệ thống, xây dựng chính sách và kiến trúc bảo mật.</p>
-    </div>
-
-    <div class="card">
-        <h3>Tư vấn dự án CNTT</h3>
-        <p>Lập báo cáo nghiên cứu khả thi, báo cáo kinh tế kỹ thuật, đấu thầu dự án CNTT.</p>
-    </div>
-</section>
-
-<section>
-    <h2>Blog</h2>
-    <div class="card">
-        <p>- Kinh nghiệm triển khai DBA</p>
-	<p>- Hành trình từ OCP 9i lên OCP 26AI</p>
-        <p>- Triển khai An ninh mạng</p>
-	<p>- Tư vấn dự án CNTT.</p>
-    </div>
-</section>
-
-<section>
-    <h2>Liên hệ hợp tác</h2>
-    <div class="card">
-        <p>Email: hanhhoduc@gmail.com; Mobile: 0912.388.515</p>
-        <p>Sẵn sàng hợp tác tư vấn dự án CNTT; đào tạo Oracle và Security.</p>
-    </div>
-</section>
 <footer>
-    © 2026 Hồ Đức Hạnh | Oracle, Cybersecurity & IT project Consultant
+
+© 2026 Hồ Đức Hạnh  
+Oracle • Cybersecurity • IT Consultant
+
 </footer>
+
+
+<script>
+
+function showSection(id,element){
+
+let sections=document.querySelectorAll("section");
+
+sections.forEach(s=>s.classList.remove("active"));
+
+document.getElementById(id).classList.add("active");
+
+let menu=document.querySelectorAll("nav a");
+
+menu.forEach(m=>m.classList.remove("active"));
+
+element.classList.add("active");
+
+window.scrollTo({top:0,behavior:"smooth"});
+
+}
+
+</script>
 
 </body>
 </html>
